@@ -34,7 +34,7 @@ class tx_contagged_pi1 extends tslib_pibase {
 	var $prefixId = 'tx_contagged'; // same as class name
 	var $scriptRelPath = 'pi1/class.tx_contagged_pi1.php'; // path to this script relative to the extension dir
 	var $extKey = 'contagged'; // the extension key
-	var $templateFile = 'EXT:contagged/pi1/contagged.tmpl';
+	var $templateFile = 'EXT:contagged/Resources/Private/Templates/Contagged.html';
 
 	var $conf; // the TypoScript configuration array
 	var $templateCode; // template file
@@ -303,7 +303,7 @@ class tx_contagged_pi1 extends tslib_pibase {
 		$pagesWithKeyword = $GLOBALS['TYPO3_DB']->exec_SELECTQuery(
 			'pid, title',
 			'pages',
-			'FIND_IN_SET(\'' . $termArray['term_main'] . '\', tx_contagged_keywords)'
+			'pid > 0 AND FIND_IN_SET(\'' . $termArray['term_main'] . '\', tx_contagged_keywords) ' . $this->cObj->enableFields("pages")
 		);
 
 		$pages = '<ul class="disc">';

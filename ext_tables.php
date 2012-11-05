@@ -10,8 +10,8 @@ t3lib_extMgm::addToInsertRecords('tx_contagged_terms');
 t3lib_extMgm::addPlugin(array('LLL:EXT:contagged/locallang_db.php:tx_contagged_terms.plugin', $_EXTKEY . '_pi1'), 'list_type');
 
 // initialize static extension templates
-t3lib_extMgm::addStaticFile($_EXTKEY, 'static/', 'Content parser');
-t3lib_extMgm::addStaticFile($_EXTKEY, 'static/examples/', 'Experimental Setup');
+t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/', 'Content parser');
+t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/examples/', 'Experimental Setup');
 
 $TCA["tx_contagged_terms"] = array(
 	"ctrl" => array(
@@ -36,8 +36,8 @@ $TCA["tx_contagged_terms"] = array(
 			'fe_group' => 'fe_group',
 		),
 		'useColumnsForDefaultValues' => 'term_type',
-		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'tca.php',
-		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'icon_tx_contagged_terms.gif',
+		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/Tca/Tca.php',
+		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/icon_tx_contagged_terms.gif',
 	),
 	"feInterface" => array(
 		"fe_admin_fieldList" => "sys_language_uid, l18n_parent, l18n_diffsource, hidden, starttime, endtime, fe_group, term_main, term_alt, term_type, term_lang, term_replace, desc_short, desc_long, image, dam_images, imagecaption, imagealt, imagetitle, related, link, exclude",
