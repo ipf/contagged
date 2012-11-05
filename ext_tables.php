@@ -15,7 +15,7 @@ t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/examples/', 'Exp
 
 $TCA["tx_contagged_terms"] = array(
 	"ctrl" => array(
-		'title' => 'LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms',
+		'title' => 'LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms',
 		'label' => 'term_replace',
 		'label_alt' => 'term_main, term_alt',
 		'label_alt_force' => TRUE,
@@ -48,7 +48,7 @@ $TCA["tx_contagged_terms"] = array(
 $tempColumns = Array(
 	"tx_contagged_dont_parse" => Array(
 		"exclude" => 1,
-		"label" => "LLL:EXT:contagged/locallang_db.xml:pages.tx_contagged_dont_parse",
+		"label" => "LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:pages.tx_contagged_dont_parse",
 		"config" => Array(
 			"type" => "check",
 		)

@@ -65,7 +65,7 @@ class tx_contagged_pi1 extends tslib_pibase {
 		$this->typolinkConf = is_array($this->conf['typolink.']) ? $this->conf['typolink.'] : array();
 		$this->typolinkConf['parameter.']['current'] = 1;
 		if (!empty($this->typolinkConf['additionalParams'])) {
-			$this->typolinkConf['additionalParams'] = $this->cObj->stdWrap($typolinkConf['additionalParams'], $typolinkConf['additionalParams.']);
+			$this->typolinkConf['additionalParams'] = $this->cObj->stdWrap($this->typolinkConf['additionalParams'], $this->typolinkConf['additionalParams.']);
 			unset($this->typolinkConf['additionalParams.']);
 		}
 		$this->typolinkConf['useCacheHash'] = 1;
@@ -299,11 +299,11 @@ class tx_contagged_pi1 extends tslib_pibase {
 		$markerArray['###IMAGES_LABEL###'] = $markerArray['###IMAGES###'] ? $this->local_cObj->stdWrap($this->pi_getLL('images'), $labelWrap) : '';
 		$markerArray['###TERM_LANG_LABEL###'] = $markerArray['###TERM_LANG###'] ? $this->local_cObj->stdWrap($this->pi_getLL('term_lang'), $labelWrap) : '';
 
-			// get all pages with the desired keyword
+		// get all pages with the desired keyword
 		$pagesWithKeyword = $GLOBALS['TYPO3_DB']->exec_SELECTQuery(
 			'pid, title',
 			'pages',
-			'pid > 0 AND FIND_IN_SET(\'' . $termArray['term_main'] . '\', tx_contagged_keywords) ' . $this->cObj->enableFields("pages")
+				'pid > 0 AND FIND_IN_SET(\'' . $termArray['term_main'] . '\', tx_contagged_keywords) ' . $this->cObj->enableFields("pages")
 		);
 
 		$pages = '<ul class="disc">';
@@ -360,8 +360,8 @@ class tx_contagged_pi1 extends tslib_pibase {
 			$res = $GLOBALS['TYPO3_DB']->exec_SELECT_mm_query(
 				'tx_dam.file_path, tx_dam.file_name, tx_dam.alt_text, tx_dam.caption, tx_dam.title',
 				'tx_dam', 'tx_dam_mm_ref', 'tx_contagged_terms',
-				'AND tx_dam_mm_ref.tablenames = "tx_contagged_terms" AND tx_dam_mm_ref.ident="dam_images" ' .
-					'AND tx_dam_mm_ref.uid_foreign = "' . $termArray['uid'] . '"', '', 'tx_dam_mm_ref.sorting_foreign ASC'
+					'AND tx_dam_mm_ref.tablenames = "tx_contagged_terms" AND tx_dam_mm_ref.ident="dam_images" ' .
+							'AND tx_dam_mm_ref.uid_foreign = "' . $termArray['uid'] . '"', '', 'tx_dam_mm_ref.sorting_foreign ASC'
 			);
 			while ($row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
 				$images[] = $row['file_path'] . $row['file_name'];
@@ -397,6 +397,7 @@ class tx_contagged_pi1 extends tslib_pibase {
 	}
 
 	function renderIndex(&$markerArray, &$terms) {
+		$subpartArray = array();
 		if ($this->conf['index.']['enable'] > 0) {
 			$subparts = array();
 			$subparts['template_index'] = $this->cObj->getSubpart($this->templateCode, '###TEMPLATE_INDEX###');

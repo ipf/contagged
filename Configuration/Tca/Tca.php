@@ -101,7 +101,7 @@ $TCA["tx_contagged_terms"] = array(
 		),
 		"term_main" => Array(
 			"exclude" => 1,
-			"label" => "LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.term_main",
+			"label" => "LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.term_main",
 			"config" => Array(
 				"type" => "input",
 				"size" => "30",
@@ -110,7 +110,7 @@ $TCA["tx_contagged_terms"] = array(
 		),
 		"term_alt" => Array(
 			"exclude" => 1,
-			"label" => "LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.term_alt",
+			"label" => "LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.term_alt",
 			"config" => Array(
 				"type" => "text",
 				"cols" => "30",
@@ -119,7 +119,7 @@ $TCA["tx_contagged_terms"] = array(
 		),
 		"term_type" => Array(
 			"exclude" => 1,
-			"label" => "LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.term_type",
+			"label" => "LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.term_type",
 			"config" => Array(
 				"type" => "select",
 				"itemsProcFunc" => "user_addTermTypes",
@@ -130,18 +130,18 @@ $TCA["tx_contagged_terms"] = array(
 		),
 		"term_lang" => Array(
 			"exclude" => 1,
-			"label" => "LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.term_lang",
+			"label" => "LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.term_lang",
 			"config" => Array(
 				"type" => "select",
 				// TODO Make selectable languages configurable.
 				"items" => Array(
-					Array("LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.term_lang.I.0", ""),
-					Array("LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.term_lang.I.1", "en"),
-					Array("LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.term_lang.I.2", "fr"),
-					Array("LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.term_lang.I.3", "de"),
-					Array("LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.term_lang.I.4", "it"),
-					Array("LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.term_lang.I.5", "es"),
-					Array("LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.term_lang.I.6", "un"),
+					Array("LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.term_lang.I.0", ""),
+					Array("LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.term_lang.I.1", "en"),
+					Array("LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.term_lang.I.2", "fr"),
+					Array("LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.term_lang.I.3", "de"),
+					Array("LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.term_lang.I.4", "it"),
+					Array("LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.term_lang.I.5", "es"),
+					Array("LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.term_lang.I.6", "un"),
 				),
 				"size" => 1,
 				"maxitems" => 1,
@@ -149,7 +149,7 @@ $TCA["tx_contagged_terms"] = array(
 		),
 		"term_replace" => Array(
 			"exclude" => 1,
-			"label" => "LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.term_replace",
+			"label" => "LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.term_replace",
 			"config" => Array(
 				"type" => "input",
 				"size" => "30",
@@ -157,7 +157,7 @@ $TCA["tx_contagged_terms"] = array(
 		),
 		"desc_short" => Array(
 			"exclude" => 1,
-			"label" => "LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.desc_short",
+			"label" => "LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.desc_short",
 			"config" => Array(
 				"type" => "input",
 				"size" => "30",
@@ -165,7 +165,7 @@ $TCA["tx_contagged_terms"] = array(
 		),
 		"desc_long" => Array(
 			"exclude" => 1,
-			"label" => "LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.desc_long",
+			"label" => "LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.desc_long",
 			"config" => Array(
 				"type" => "text",
 				"cols" => "30",
@@ -174,7 +174,7 @@ $TCA["tx_contagged_terms"] = array(
 		),
 		"reference" => Array(
 			"exclude" => 1,
-			"label" => "LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.reference",
+			"label" => "LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.reference",
 			"config" => Array(
 				"type" => "text",
 				"cols" => "30",
@@ -183,14 +183,14 @@ $TCA["tx_contagged_terms"] = array(
 		),
 		"pronunciation" => Array(
 			"exclude" => 1,
-			"label" => "LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.pronunciation",
+			"label" => "LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.pronunciation",
 			"config" => Array(
 				"type" => "input",
 				"size" => "30",
 			)
 		),
 		'multimedia' => Array(
-			'label' => 'LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.multimedia',
+			'label' => 'LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.multimedia',
 			'config' => Array(
 				'type' => 'group',
 				'internal_type' => 'file',
@@ -205,7 +205,7 @@ $TCA["tx_contagged_terms"] = array(
 		'related' => Array(
 			'exclude' => 1,
 			'l10n_mode' => 'exclude',
-			'label' => 'LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.related',
+			'label' => 'LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.related',
 			'config' => Array(
 				'type' => 'group',
 				'internal_type' => 'db',
@@ -220,7 +220,7 @@ $TCA["tx_contagged_terms"] = array(
 		),
 		"link" => Array(
 			"exclude" => 1,
-			"label" => "LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.link",
+			"label" => "LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.link",
 			"config" => Array(
 				"type" => "input",
 				"size" => "28",
@@ -241,7 +241,7 @@ $TCA["tx_contagged_terms"] = array(
 		),
 		"exclude" => Array(
 			"exclude" => 1,
-			"label" => "LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.exclude",
+			"label" => "LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.exclude",
 			"config" => Array(
 				"type" => "check",
 			)
@@ -283,7 +283,7 @@ if ($extConfArray['getImagesFromDAM'] > 0 && t3lib_extMgm::isLoaded('dam')) {
 			),
 			'imagecaption' => Array(
 				'exclude' => 1,
-				'label' => 'LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.imagecaption',
+				'label' => 'LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.imagecaption',
 				'l10n_mode' => $l10n_mode,
 				'config' => Array(
 					'type' => 'text',
@@ -293,7 +293,7 @@ if ($extConfArray['getImagesFromDAM'] > 0 && t3lib_extMgm::isLoaded('dam')) {
 			),
 			'imagealt' => Array(
 				'exclude' => 1,
-				'label' => 'LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.imagealt',
+				'label' => 'LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.imagealt',
 				'l10n_mode' => $l10n_mode,
 				'config' => Array(
 					'type' => 'text',
@@ -303,7 +303,7 @@ if ($extConfArray['getImagesFromDAM'] > 0 && t3lib_extMgm::isLoaded('dam')) {
 			),
 			'imagetitle' => Array(
 				'exclude' => 1,
-				'label' => 'LLL:EXT:contagged/locallang_db.xml:tx_contagged_terms.imagetitle',
+				'label' => 'LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:tx_contagged_terms.imagetitle',
 				'l10n_mode' => $l10n_mode,
 				'config' => Array(
 					'type' => 'text',
