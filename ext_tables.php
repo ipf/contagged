@@ -7,7 +7,7 @@ t3lib_extMgm::allowTableOnStandardPages('tx_contagged_terms');
 t3lib_extMgm::addToInsertRecords('tx_contagged_terms');
 
 // add contagged to the "insert plugin" content element
-t3lib_extMgm::addPlugin(array('LLL:EXT:contagged/locallang_db.php:tx_contagged_terms.plugin', $_EXTKEY . '_pi1'), 'list_type');
+t3lib_extMgm::addPlugin(array('LLL:EXT:contagged/Resources/Private/Language/locallang_db.php:tx_contagged_terms.plugin', $_EXTKEY . '_pi1'), 'list_type');
 
 // initialize static extension templates
 t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/', 'Content parser');
@@ -63,4 +63,9 @@ t3lib_div::loadTCA("tt_content");
 t3lib_extMgm::addTCAcolumns("tt_content", $tempColumns, 1);
 t3lib_extMgm::addToAllTCAtypes("tt_content", "tx_contagged_dont_parse;;;;1-1-1");
 
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+	'Sub.' . $_EXTKEY,
+	'Pagetags',
+	'Tags'
+);
 ?>

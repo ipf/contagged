@@ -156,7 +156,6 @@ plugin.tx_contagged {
 			label.de = Abkürzung (Beispiel: u.s.w.)
 			tag = abbr
 		}
-				
 	}
 
 	dataSources {
@@ -190,7 +189,22 @@ plugin.tx_contagged {
 		}
 	}
 }
-
+plugin.tx_contagged {
+	persistence {
+		storagePid = {$contagged.storagePids}
+		classes {
+			Sub\Contagged\Domain\Model\Page {
+				mapping {
+					tableName = pages
+					columns {
+						title.mapOnProperty = title
+						tx_contagged_keywords.mapOnProperty = tags
+					}
+				}
+			}
+		}
+	}
+}
 plugin.tx_contagged {
 	_CSS_DEFAULT_STYLE (
 		

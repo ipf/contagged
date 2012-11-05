@@ -36,7 +36,7 @@ contagged {
 	# cat=contagged (parser)/enable/70; type=boolean; label=Replace term: Should the term be replaced by the specified replacement? This could be overwritten by the type configuration.
 	replaceTerm = 1
 	# cat=contagged (parser)/enable/75; type=boolean; label=Update page keywords: Should the matched terms be used as keywords for the page they are on. If there is a replaced term it will be used as keyword. If no the main term will be the keyword. The list of matched terms will be stored in a separate database field (not in the field 'keywords'), so your own keywords are preserved.
-	updateKeywords = 1
+	updateKeywords = 0
 	# cat=contagged (parser)//90; type=string; label=RegEx modifier: RegEx modifier of the main RegEx. You have to add "u" if you have a site with UTF-8 encoding.
 	modifier = Uis
 	# cat=contagged (list)/dims/10; type=int; label=Image max width: Maximum width of an image in single view.
