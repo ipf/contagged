@@ -3,5 +3,7 @@ Terms on the current page
 <f:layout name="Main" />
 
 <f:section name="Main">
-{terms.tags}
+	<f:for each="{terms}" as="term">
+		<f:link.page>{term.title}</f:link.page>
+	</f:for>
 </f:section>

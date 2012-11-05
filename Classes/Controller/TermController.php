@@ -31,24 +31,45 @@ namespace Sub\Contagged\Controller;
 class TermController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	/**
-	 * @var \Sub\Contagged\Domain\Model\Page
-	 * @inject
-	 */
-	protected $page;
-
-	/**
 	 * @var \Sub\Contagged\Domain\Repository\PageRepository
 	 * @inject
 	 */
 	protected $pageRepository;
 
 	/**
+	 * @var \Sub\Contagged\Domain\Repository\TermRepository
+	 * @inject
+	 */
+	protected $termRepository;
+
+	/**
 	 * Show all tags belonging to the current page
 	 */
 	public function pageAction() {
 		$pageId = $GLOBALS['TSFE']->id;
-		$terms = $this->pageRepository->findByUid($pageId);
+		$terms = $this->pageRepository->findByUid($pageId)->getTags();
+		$terms = self::splitTerms($terms);
 		$this->view->assign('terms', $terms);
+	}
+
+	/**
+	 * Split the term string and return an array with the ids to link to them
+	 *
+	 * @param $terms
+	 * @return array
+	 */
+	protected function splitTerms($terms) {
+
+		$tags = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(',', $terms);
+		$tagCollection = array();
+		foreach ($tags as $tag) {
+			$tagIdentifier = array(
+				'uid' => $this->termRepository->findByTitle($tag)->getFirst()->getUid(),
+				'title' => $tag
+			);
+			array_push($tagCollection, $tagIdentifier);
+		}
+		return $tagCollection;
 	}
 
 }
