@@ -47,9 +47,16 @@ class TermController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 */
 	public function pageAction() {
 		$pageId = $GLOBALS['TSFE']->id;
+		xdebug_break();
 		$terms = $this->pageRepository->findByUid($pageId)->getTags();
-		$terms = self::splitTerms($terms);
-		$this->view->assign('terms', $terms);
+
+		if (!empty($terms)) {
+			$terms = self::splitTerms($terms);
+			$this->view
+					->assign('terms', $terms)
+					->assign('listPages', $this->settings['listPages'])
+			;
+		}
 	}
 
 	/**
@@ -65,7 +72,7 @@ class TermController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		foreach ($tags as $tag) {
 			$tagIdentifier = array(
 				'uid' => $this->termRepository->findByTitle($tag)->getFirst()->getUid(),
-				'title' => $tag
+				'title' => ucfirst($tag)
 			);
 			array_push($tagCollection, $tagIdentifier);
 		}

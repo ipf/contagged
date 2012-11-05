@@ -3,7 +3,9 @@ Terms on the current page
 <f:layout name="Main" />
 
 <f:section name="Main">
-	<f:for each="{terms}" as="term">
-		<f:link.page>{term.title}</f:link.page>
-	</f:for>
+	<ul class="disc">
+		<f:for each="{terms}" as="term">
+			<li><f:link.page pageUid="{listPages}" additionalParams="{tx_contagged: {uid: term.uid, source: 'default'}}">{term.title}</f:link.page></li>
+		</f:for>
+	</ul>
 </f:section>

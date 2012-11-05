@@ -188,8 +188,6 @@ plugin.tx_contagged {
 			}
 		}
 	}
-}
-plugin.tx_contagged {
 	persistence {
 		storagePid = {$contagged.storagePids}
 		classes {
@@ -212,8 +210,9 @@ plugin.tx_contagged {
 			}
 		}
 	}
-}
-plugin.tx_contagged {
+	settings {
+		listPages = {$contagged.listPages}
+	}
 	_CSS_DEFAULT_STYLE (
 		
 		div.tx-contagged-pi1 dt {
