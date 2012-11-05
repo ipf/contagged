@@ -31,6 +31,7 @@
 			<label index="tx_contagged_terms.link">Link</label>
 			<label index="tx_contagged_terms.exclude">Exclude from front-end lists</label>
 			<label index="pages.tx_contagged_dont_parse">Don't parse text</label>
+			<label index="pages.tx_contagged_terms">Manually set tags</label>
 		</languageKey>
 		<languageKey index="de" type="array">
 			<label index="tx_contagged_terms">Ausdrücke</label>
@@ -58,6 +59,7 @@
 			<label index="tx_contagged_terms.link">Verweis</label>
 			<label index="tx_contagged_terms.exclude">Von Frontend-Listen ausschließen</label>
 			<label index="pages.tx_contagged_dont_parse">Text nicht parsen</label>
+			<label index="pages.tx_contagged_terms">Tags manuell setzen</label>
 		</languageKey>
 		<languageKey index="fr" type="array">
 			<label index="tx_contagged_terms">Termes</label>

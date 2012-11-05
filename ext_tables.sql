@@ -63,11 +63,25 @@ CREATE TABLE tx_contagged_related_mm (
 );
 
 #
+# Table structure for table 'tx_contagged_terms_content_mm'
+#
+CREATE TABLE tx_contagged_terms_content_mm (
+	uid_local int(11) unsigned DEFAULT '0' NOT NULL,
+	uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+	sorting int(11) unsigned DEFAULT '0' NOT NULL,
+	tablename tinytext NOT NULL,
+
+	KEY uid_local (uid_local),
+	KEY uid_foreign (uid_foreign)
+);
+
+#
 # Table structure for table 'pages'
 #
 CREATE TABLE pages (
 	tx_contagged_dont_parse tinyint(3) DEFAULT '0' NOT NULL,
 	tx_contagged_keywords text NOT NULL,
+	tx_contagged_terms int(11) unsigned DEFAULT '0' NOT NULL,
 );
 
 #

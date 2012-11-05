@@ -54,8 +54,7 @@ class TermController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 			$terms = self::splitTerms($terms);
 			$this->view
 					->assign('terms', $terms)
-					->assign('listPages', $this->settings['listPages'])
-			;
+					->assign('listPages', $this->settings['listPages']);
 		}
 	}
 

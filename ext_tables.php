@@ -53,16 +53,40 @@ $tempColumns = Array(
 			"type" => "check",
 		)
 	),
+	'tx_contagged_terms' => array(
+		'exclude' => 1,
+		'label' => 'LLL:EXT:contagged/Resources/Private/Language/locallang_db.xml:pages.tx_contagged_terms',
+		'config' => array(
+			'type' => 'select',
+			'MM_opposite_field' => 'term_main',
+			'foreign_table' => 'tx_contagged_terms',
+			//'foreign_table_where' => ' ORDER BY tx_contagged_terms.term_main ASC',
+			//'default_sortby' => ' tx_contagged_terms.term_main ASC',
+			'MM' => 'tx_contagged_terms_content_mm',
+			'maxitems' => 9999,
+			'size'=> 10,
+			'appearance' => array(
+				'collapse' => 0,
+				'levelLinksPosition' => 'both',
+				'showSynchronizationLink' => 1,
+				'showPossibleLocalizationRecords' => 1,
+				'showAllLocalizationLink' => 1
+			),
+		),
+	),
 );
 
 t3lib_div::loadTCA("pages");
 t3lib_extMgm::addTCAcolumns("pages", $tempColumns, 1);
 t3lib_extMgm::addToAllTCAtypes("pages", "tx_contagged_dont_parse;;;;1-1-1");
+t3lib_extMgm::addToAllTCAtypes("pages", "tx_contagged_terms;;;;1-1-1");
 
 t3lib_div::loadTCA("tt_content");
 t3lib_extMgm::addTCAcolumns("tt_content", $tempColumns, 1);
 t3lib_extMgm::addToAllTCAtypes("tt_content", "tx_contagged_dont_parse;;;;1-1-1");
+t3lib_extMgm::addToAllTCAtypes("pages", "tx_contagged_terms;;;;1-1-1");
 
+// register plugin for showing  all tags belonging to a page
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
 	'Sub.' . $_EXTKEY,
 	'Pagetags',
