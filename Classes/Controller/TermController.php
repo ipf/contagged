@@ -47,7 +47,6 @@ class TermController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 */
 	public function pageAction() {
 		$pageId = $GLOBALS['TSFE']->id;
-		xdebug_break();
 		$terms = $this->pageRepository->findByUid($pageId)->getTags();
 
 		if (!empty($terms)) {

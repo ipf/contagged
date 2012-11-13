@@ -197,6 +197,7 @@ plugin.tx_contagged {
 					columns {
 						title.mapOnProperty = title
 						tx_contagged_keywords.mapOnProperty = tags
+						tx_contagged_terms = terms
 					}
 				}
 			}

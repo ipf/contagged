@@ -1,6 +1,5 @@
 <?php
-namespace Sub\Contagged\Domain\Model;
-
+namespace Sub\Contagged\Utility;
 /* * *************************************************************
  *  Copyright notice
  *
@@ -27,59 +26,27 @@ namespace Sub\Contagged\Domain\Model;
  * ************************************************************* */
 
 /**
- * Model for pages
+ * Utility Class for Contagged
  *
  */
-class Page extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
+class Utility {
 
 	/**
-	 * @var string
+	 * Utility method to sort array items according to the (string) length of their "term" item
+	 * Note: the sorting is descending
+	 *
+	 * @param array $a
+	 * @param array $b
+	 * @return integer +1 if term from a is shorter than b, -1 for the contrary, 0 in case of equality
 	 */
-	protected $title;
-
-	/**
-	 * @var string
-	 */
-	protected $tags;
-
-	/**
-	 * @var \Sub\Contagged\Domain\Model\Term
-	 */
-	protected $terms;
-
-
-	public function __construct() {
-		$this->initializeStorageObjects();
+	static public function sortTermsByDescendingLength($a, $b) {
+		// Calculate length correctly by relying on t3lib_cs
+		$aTermLength = $GLOBALS['TSFE']->csConvObj->strlen($GLOBALS['TSFE']->renderCharset, $a['term']);
+		$bTermLength = $GLOBALS['TSFE']->csConvObj->strlen($GLOBALS['TSFE']->renderCharset, $b['term']);
+		if ($aTermLength == $bTermLength) {
+			return 0;
+		} else {
+			return ($aTermLength < $bTermLength) ? +1 : -1;
+		}
 	}
-
-	public function initializeStorageObjects() {}
-
-	/**
-	 * @param string $tags
-	 */
-	public function setTags($tags) {
-		$this->tags = $tags;
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getTags() {
-		return $this->tags;
-	}
-
-	/**
-	 * @param string $title
-	 */
-	public function setTitle($title) {
-		$this->title = $title;
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getTitle() {
-		return $this->title;
-	}
-
 }
