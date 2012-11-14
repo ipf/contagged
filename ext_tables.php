@@ -79,12 +79,12 @@ $tempColumns = Array(
 t3lib_div::loadTCA("pages");
 t3lib_extMgm::addTCAcolumns("pages", $tempColumns, 1);
 t3lib_extMgm::addToAllTCAtypes("pages", "tx_contagged_dont_parse;;;;1-1-1");
-t3lib_extMgm::addToAllTCAtypes("pages", "tx_contagged_terms;;;;1-1-1");
+//t3lib_extMgm::addToAllTCAtypes("pages", "tx_contagged_terms;;;;1-1-1");
 
 t3lib_div::loadTCA("tt_content");
 t3lib_extMgm::addTCAcolumns("tt_content", $tempColumns, 1);
 t3lib_extMgm::addToAllTCAtypes("tt_content", "tx_contagged_dont_parse;;;;1-1-1");
-t3lib_extMgm::addToAllTCAtypes("pages", "tx_contagged_terms;;;;1-1-1");
+//t3lib_extMgm::addToAllTCAtypes("pages", "tx_contagged_terms;;;;1-1-1");
 
 // register plugin for showing  all tags belonging to a page
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
