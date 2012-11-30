@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PDepend>
+  <Packages>
+    <Package name="Sub\Contagged\Controller">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>2</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/home/ingop/Sites/dariah/typo3conf/ext/contagged/Classes/Controller/TermController.php">TermController</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>TYPO3\CMS\Core\Utility</Package>
+        <Package>TYPO3\CMS\Extbase\Mvc\Controller</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="Sub\Contagged\Domain\Model">
+      <Stats>
+        <TotalClasses>3</TotalClasses>
+        <ConcreteClasses>3</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>1</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/home/ingop/Sites/dariah/typo3conf/ext/contagged/Classes/Domain/Model/Content.php">Content</Class>
+        <Class sourceFile="/home/ingop/Sites/dariah/typo3conf/ext/contagged/Classes/Domain/Model/Page.php">Page</Class>
+        <Class sourceFile="/home/ingop/Sites/dariah/typo3conf/ext/contagged/Classes/Domain/Model/Term.php">Term</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>TYPO3\CMS\Extbase\DomainObject</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="Sub\Contagged\Domain\Repository">
+      <Stats>
+        <TotalClasses>2</TotalClasses>
+        <ConcreteClasses>2</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>1</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/home/ingop/Sites/dariah/typo3conf/ext/contagged/Classes/Domain/Repository/PageRepository.php">PageRepository</Class>
+        <Class sourceFile="/home/ingop/Sites/dariah/typo3conf/ext/contagged/Classes/Domain/Repository/TermRepository.php">TermRepository</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>TYPO3\CMS\Extbase\Persistence</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="Sub\Contagged\Utility">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>0</Ce>
+        <A>0</A>
+        <I>0</I>
+        <D>1</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/home/ingop/Sites/dariah/typo3conf/ext/contagged/Classes/Utility/Utility.php">Utility</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon/>
+      <UsedBy/>
+    </Package>
+    <Package name="TYPO3\tx_contagged">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>1</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/home/ingop/Sites/dariah/typo3conf/ext/contagged/class.tx_contagged.php">tx_contagged</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>+global</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="TYPO3\tx_contagged_model_mapper">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>1</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/home/ingop/Sites/dariah/typo3conf/ext/contagged/model/class.tx_contagged_model_mapper.php">tx_contagged_model_mapper</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>+global</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="TYPO3\tx_contagged_model_terms">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>2</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/home/ingop/Sites/dariah/typo3conf/ext/contagged/model/class.tx_contagged_model_terms.php">tx_contagged_model_terms</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>+global</Package>
+        <Package>+spl</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="TYPO3\tx_contagged_pi1">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>1</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/home/ingop/Sites/dariah/typo3conf/ext/contagged/pi1/class.tx_contagged_pi1.php">tx_contagged_pi1</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>+global</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+  </Packages>
+  <Cycles/>
+</PDepend>
